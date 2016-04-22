@@ -1,0 +1,133 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+% moderncv themes
+%\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[blue]{classic}                % idem
+\usepackage{xunicode, xltxtra}
+\XeTeXlinebreaklocale "zh"
+\widowpenalty=10000
+
+%\setmainfont[Mapping=tex-text]{文泉驿正黑}
+
+% character encoding
+%\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+\usepackage{CJKutf8}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\recomputelengths                             % required when changes are made to page layout lengths
+\setmainfont[Mapping=tex-text]{Hiragino Sans GB}
+\setsansfont[Mapping=tex-text]{Hiragino Sans GB}
+\CJKtilde
+
+% personal data
+
+%% start of file `template-zh.tex'.
+%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+% 个人信息
+\firstname{未命名}
+\familyname{}
+\address{}{这个男人来自地球}             % 可选项、如不需要可删除本行
+\mobile{+86~You Guess}                         % 可选项、如不需要可删除本行
+%\phone{+2~(345)~678~901}                          % 可选项、如不需要可删除本行
+%\fax{+3~(456)~789~012}                            % 可选项、如不需要可删除本行
+\email{root@linux.me}                    % 可选项、如不需要可删除本行
+\homepage{http://armsword.com}                  % 可选项、如不需要可删除本行
+\extrainfo{搜索研发工程师}                  % 可选项、如不需要可删除本行
+%\extrainfo{附加信息 (可选项)}                  % 可选项、如不需要可删除本行
+%\photo[64pt]{avatar.JPG}                  % ‘64pt’是图片必须压缩至的高度、‘0.4pt‘是图片边框的宽度 (如不需要可调节至0pt)、’picture‘ 是图片文件的名字;可选项、如不需要可删除本行
+
+%\quote{引言(可选项)}                           % 可选项、如不需要可删除本行
+
+% 显示索引号;仅用于在简历中使用了引言
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% 分类索引
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            内容
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{教育背景}
+\cventry{2012--2014}{硕士}{研究生}{专业}{}{}  % 第3到第6编码可留白
+\cventry{2007--2011}{本科}{大学}{专业}{}{}  % 第3到第6编码可留白
+
+\section{工作经历}
+\cventry{2014.7--至今}{环球汽车零部件有限公司}{发动机技术中心}{工程师}{}
+{主要负责发动机台架试验及关键零部件测试台架及测试程序开发。测试程序台架控制主要由LabView、VB及PLC编程进行开发，主要工作包含数据采集、动力源控制及执行器动作；台架试验包含发动机性能、耐久测试及关键部件可靠性测试。}  % 第3到第6编码可留白
+
+%\section{毕业论文}
+%\cvitem{题目}{\emph{题目}}
+%\cvitem{导师}{导师}
+%\cvitem{说明}{\small 论文简介}
+
+\section{社区}
+\cventry{Blog}{\url{http://armsword.com }}{}{}{}{}
+\cventry{GitHub}{\url{https://github.com/armsword }}{}{}{}{}
+
+\section{项目经历}
+\renewcommand{\baselinestretch}{1.2}
+
+\cventry{2016--至今}
+{TalkToSelf}
+{Objective-C}
+{个人项目}{}
+{以记事本为基础功能的本地应用，特点是以聊天的方式进行信息的录入，支持文本、图片、语音的输入方式。主要由三部分组成：登录部分、信息输入及显示部分以及若干用户信息编辑及应用功能偏好设置部分。使用CALayer绘制密码录入界面，UITableView实现信息显示界面；Lame进行音频转换；FMDB/归档/keyChain分别进行消息/用户信息/密码的存储；CoreAnimation实现过程动画及弹球效果。\\项目源码：\url{https://github.com/}}
+
+\cventry{2015--2016}
+{BounceView 弹球效果}
+{Objective-C}
+{个人项目}{}
+{弹球效果是利用关键帧动画实现的目标视图在容器视图内弹折的动画效果，其实现机理是根据拖动手势结束时的速度及拖动方向计算运动路程。使用到的技术包括手势识别、CALayer绘制及关键帧动画实现。\\项目源码：\url{https://github.com/}}
+
+\cventry{2015--2016}
+{ScreenLock}
+{Objective-C}
+{个人项目}{}
+{屏幕锁功能的实现，实现根据手势识别进行密码录入的功能，其实现方案是利用图层绘制底图案，根据手指运动实现高亮部分及运动轨迹的动态绘制，并对可选区域进行控制，避免重复选择和重复绘制。\\项目源码：\url{https://github.com/}}
+
+
+\section{语言技能}
+\cvline{英语}{\textbf{CET-6 551}，有较好的阅读英文文献和教程能力}
+
+\section{计算机技能}
+\cvline{语言相关}{熟悉C/Objective-C，熟悉GCD/NSOperation多线程技术，熟悉常用设计模式}
+\cvline{框架和UI}{Xib，AutoLayout，XML/JSON，CoreAnimation，Quartz2D}
+\cvline{数据库}{SQLite3, CoreData}
+\cvline{工具}{XCode，Git，CocoaPods}
+
+\section{自我评价}
+\cvline{}{敏而好学、乐观自信}
+
+\closesection{}                   % needed to renewcommands
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+% 来自BibTeX文件但不使用multibib包的出版物
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% BibTeX的数字标签
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                    % 'publications' 是BibTeX文件的文件名
+
+% 来自BibTeX文件并使用multibib包的出版物
+%\section{出版物}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}               % 'publications' 是BibTeX文件的文件名
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}               % 'publications' 是BibTeX文件的文件名
+
+\end{document}
+
+
+%% 文件结尾 `template-zh.tex'.
